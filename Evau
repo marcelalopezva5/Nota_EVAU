@@ -1,0 +1,91 @@
+# Calcular nota de la EVAU y te dice si cursaras tres diferentes carreras.
+#Carrera veterinaria ejemplo
+def nota_evau():
+    n1=0
+    n2=0
+    n3=0
+    n4=0
+    n5=0
+    n6=0
+    n7=0
+    n8=0
+    n9=0
+    n10=0
+    n11=0
+    n1=int(input("Dime cuanto has sacado en Inglés o Francés: "))
+    n2=int(input("Dime cuanto has sacado en Lengua: "))
+    n3=int(input("Dime cuanto has sacado en Historia: "))
+    n4=int(input("Dime cuanto has sacado en Matemáticas II: "))
+  
+    suma=n1+n2+n3+n4
+    media_aritmetica=suma/4
+    print(media_aritmetica)
+    
+    seguir=True
+    while(seguir==True):
+       if(media_aritmetica<4):
+         print("Tiene que sacar un 4 mínimo en la fase obligatoria")
+         seguir=True
+       else:
+           seguir=False
+           if(media_aritmetica>4):
+             print("fase obligatoria superada")
+             
+         
+    n5=int(input("Dime tu nota media de bachiller: "))
+    nota_acceso=0.4*media_aritmetica + 0.6*n5
+    print("Tu nota de acceso es:" )
+    print(nota_acceso)
+    
+    seguir=True
+    while(seguir==True):
+       if(nota_acceso<4):
+         print("SUSPENSO")
+         seguir=True
+       else:
+           seguir=False
+           if(nota_acceso>4):
+             print("APROBADA :)")
+
+    print("*****¿Que asignaturas voluntarias has realizado?*****")
+    print("1.Mates")
+    print("2.Bio")
+    print("3.Geo")
+    print("4.Fisica")
+    print("5.Quimica")
+    print("6. NINGUNA")
+    print("7.**CALCULAR NOTA ADMISION**")
+    
+def main():
+    seguir=True
+    respuesta=0
+    while(seguir==True):
+        muestra
+        if(respuesta==1):
+            n6=int(input("Dime la nota: "))
+            nota_voluntaria1=n6*0.15
+            print(nota_voluntaria1)
+        if(respuesta==2):
+            n7=int(input("Dime la nota: "))
+            nota_voluntaria2=n7*0.2
+            print(nota_voluntaria2)
+        if(respuesta==3):
+            n8=int(input("Dime la nota: "))
+            nota_voluntaria3=n8*0.1
+            print(nota_voluntaria3)
+        if(respuesta==4):
+            n9=int(input("Dime la nota: "))
+            nota_voluntaria4=n9*0.15
+            print(nota_voluntaria4)
+        if(respuesta==5):
+            n10=int(input("Dime la nota: "))
+            nota_voluntaria5=n10*0.2
+            print(nota_voluntaria5)
+        if(respuesta==6):
+          print("No ha elegido asignatura voluntaria")
+        if(respuesta==7):
+          print (nota_admision= nota_acceso + nota_voluntaria1 + nota_voluntaria2)
+         
+    
+
+nota_evau()
